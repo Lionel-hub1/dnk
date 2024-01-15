@@ -1,7 +1,5 @@
 # DNK - Wearable Accessories Website
 
-![DNK Logo](./static/dnk_logo_trp.png)
-
 DNK is a website for selling high-quality wearable accessories. This project is built using Django, a powerful web framework for Python.
 
 ## Features
