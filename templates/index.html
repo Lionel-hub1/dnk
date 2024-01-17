@@ -4,12 +4,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AppUX Home</title>
+    <title>DNK Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-[#EDEBF4]">
-    <header>
-      <nav class="md:px-[10vw]">
+    <header class="bg-[#12618F] relative h-[30rem]">
+      <div class="absolute inset-0">
+        <img
+          src="{% static 'top_banner_image.jpg' %}"
+          alt="header background"
+          class="w-full h-full object-cover opacity-50"
+        />
+      </div>
+      <nav class="md:px-[2vw] relative bg-[#156290] bg-opacity-75">
         <div class="flex justify-between">
           <div class="flex space-x-4">
             <div>
@@ -18,41 +25,77 @@
                 class="flex items-center py-5 px-2 text-gray-700 hover:text-green-500"
               >
                 <img
-                  src="{% static 'appux_logo.jpg' %}"
+                  src="{% static 'dnk_logo.jpg' %}"
                   alt="logo"
                   class="h-14 mr-2"
                 />
-                <span class="font-bold text-3xl text-[#57558C]">Appux</span>
+                <p
+                  class="hidden sm:flex font-bold text-xl text-white mx-3 hover:text-gray-300"
+                >
+                  Everything
+                </p>
+                <p
+                  class="hidden sm:flex font-bold text-xl text-white mx-3 hover:text-gray-300"
+                >
+                  Women
+                </p>
+                <p
+                  class="hidden sm:flex font-bold text-xl text-white mx-3 hover:text-gray-300"
+                >
+                  Men
+                </p>
+                <p
+                  class="hidden sm:flex font-bold text-xl text-white mx-3 hover:text-gray-300"
+                >
+                  Accessories
+                </p>
               </a>
             </div>
           </div>
           <div class="hidden lg:flex items-center space-x-1">
-            <a href="#" class="py-5 px-3 text-gray-700 hover:text-green-500">
-              Home
+            <a href="#" class="py-5 px-3 text-white hover:text-gray-300">
+              ABOUT
             </a>
-            <a href="#" class="py-5 px-3 text-gray-700 hover:text-green-500">
-              Case Studies
+            <a href="#" class="py-5 px-3 text-white hover:text-gray-300">
+              CONTACT US
             </a>
-            <a href="#" class="py-5 px-3 text-gray-700 hover:text-green-500">
-              Portfolios
+            <a class="flex font-bold text-xl text-white px-3" href="#">
+              <span class="font-black text-white">$</span>
+              0.00
+              <svg
+                class="w-6 h-6 text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 18 20"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 9V4a3 3 0 0 0-6 0v5m9.92 10H2.08a1 1 0 0 1-1-1.077L2 6h14l.917 11.923A1 1 0 0 1 15.92 19Z"
+                />
+              </svg>
             </a>
-            <a href="#" class="py-5 px-3 text-gray-700 hover:text-green-500">
-              Blog
-            </a>
-            <a href="#" class="py-5 px-3 text-gray-700 hover:text-green-500">
-              Resources
-            </a>
-            <a
-              href="#"
-              class="py-2 px-3 bg-[#6085E6] hover:bg-[#6085E6] text-white hover:text-white rounded-lg border-r-4 border-l-4 border-pink-500 transition duration-300"
-            >
-              Hire Us
+            <a class="flex font-bold text-xl text-white" href="#">
+              <svg
+                class="w-6 h-6 text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 14 18"
+              >
+                <path
+                  d="M7 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Zm2 1H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z"
+                />
+              </svg>
             </a>
           </div>
-          <div class="lg:hidden flex items-center">
+          <div class="flex items-center lg:hidden p-4">
             <button class="outline-none mobile-menu-button">
               <svg
-                class="w-6 h-6 text-gray-800 dark:text-black"
+                class="w-6 h-6 text-white"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -70,124 +113,688 @@
           </div>
         </div>
       </nav>
-    </header>
-    <main class="mt-14 px-[10vw]">
-      <div class="flex flex-col items-center lg:flex-row">
-        <div class="lg:w-1/2">
-          <h1 class="text-4xl font-black text-black">
-            All you wanted to know about working with designers and creating
-            delightful product experiences
-          </h1>
-        </div>
-        <div class="lg:w-1/2 w-[50vw]">
-          <img
-            src="{% static 'kits.jpg' %}"
-            alt="image"
-            class="lg:h-[15rem] px-[10vw]"
-          />
-        </div>
-      </div>
-      <div class="flex flex-col items-center lg:flex-row bg-white rounded-3xl">
-        <div class="lg:w-1/2 w-full">
-          <img
-            src="{% static 'card_1_image.jpg' %}"
-            alt="image"
-            class="w-full rounded-3xl"
-          />
-        </div>
-        <div class="lg:w-1/2 h-full px-10">
-          <h1 class="text-xs font-bold text-[#8483E2]">UI DESIGN</h1>
-          <h2 class="text-2xl font-black text-gray-800 mt-4">
-            Card Ul Examples And Best Practices For Product Owners
-          </h2>
-          <p class="mt-4 text-gray-600 text-sm">
-            Now in 2022, mors than 2.7 sition mutile app users in the worst
-            prater Android apps, na tatow the google cesign princes and the
-            design thinking process to create seamiest user experiences and
-            aesthetic verfaces for mobile apps for the android platforms
-          </p>
-          <p class="mt-4 text-gray-600 text-sm">
-            We maka android apps mare wievant to users that users leve to use
-            and bring your business experience to the next level
-          </p>
-        </div>
-      </div>
-      <div
-        class="flex flex-col lg:flex-row items-center justify-between py-4"
-        id="Links"
-      >
-        <div class="flex flex-row">
-          <h1 class="text-2xl font-black">All Posts</h1>
-          <div class="border-l-2 border-gray-300 ml-2 mr-2"></div>
-          <a class="border-b-2 underline text-[#8483E2]" href="#Links">
-            Design Process
+      <div class="absolute bottom-[8rem] left-[5rem] flex flex-col items-start">
+        <h1 class="text-5xl w-[30rem] text-white font-bold text-start">
+          Raining Offers For Hot Summer
+        </h1>
+        <h2 class="text-lg text-white font-bold text-center">
+          25% off On All Products
+        </h2>
+        <div class="flex justify-center mt-8">
+          <a
+            href="#"
+            class="py-2 px-4 font-bold bg-white text-[#08708F] hover:bg-[#08708F] hover:text-white border border-solid border-white"
+          >
+            SHOP NOW
           </a>
-          <a class="ml-5" href="#Links">Industry</a>
-          <a class="ml-5" href="#Links">Business</a>
-          <a class="ml-5" href="#Links">Technology</a>
+          <a
+            href="#"
+            class="border border-solid font-bold border-white py-2 px-4 text-white hover:bg-white hover:text-[#08708F] ml-4"
+          >
+            FIND MORE
+          </a>
         </div>
-
-        <div class="flex items-center space-x-4">
-          <div class="relative">
-            <span class="absolute inset-y-0 right-0 flex items-center pr-2">
-              <button class="bg-white px-2 py-1 rounded">
-                <svg
-                  class="w-4 h-4 text-gray-500"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M15.5 15.5L20 20"></path>
-                  <circle cx="10" cy="10" r="7"></circle>
-                </svg>
+      </div>
+    </header>
+    <main class="bg-[#EDEBF4]">
+      <section>
+        <!--Partners  Section-->
+      </section>
+      <section class="container mx-auto px-6">
+        <!--Featured Products  Section-->
+        <h1 class="flex flex-col items-center my-10">
+          <span class="text-black text-3xl font-bold text-center">
+            Featured Products
+          </span>
+          <span class="w-16 h-1 bg-[#9EBCD0] mt-4 inline-flex"></span>
+        </h1>
+        <div
+          class="grid gap-6 mt-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+        >
+          <div class="w-full max-w-sm mx-auto shadow-xl">
+            <div
+              class="flex items-start justify-end h-56 w-full bg-cover"
+              style="background-image: url('{% static 'product1.jpg' %}')"
+            >
+              <button
+                class="p-2 w-14 h-14 rounded-full bg-[#08708F] text-white ml-5 -mr-4 -mt-4 hover:bg-[#156290] focus:outline-none focus:bg-[#156290]"
+              >
+                Sales
               </button>
-            </span>
-            <input
-              type="text"
-              placeholder="Search what you want"
-              class="border border-gray-300 px-2 py-1 pl-4 rounded"
-            />
+            </div>
+            <div class="px-5 py-3">
+              <h1 class="text-gray-700 uppercase">DNK Brown Shoes</h1>
+              <p class="text-gray-400 mt-2">Men</p>
+              <p class="font-bold">
+                <span class="text-gray-500 line-through">$150.00</span>
+                <span class="text-gray-700 mt-2">$120.00</span>
+              </p>
+              <p></p>
+              <p class="flex flex-row my-2">
+                <span class="w-4 h-4 bg-red-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-blue-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-green-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-yellow-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-purple-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-pink-500 rounded-full mr-2"></span>
+              </p>
+
+              <p class="flex flex-row my-2">
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+              </p>
+            </div>
+          </div>
+          <div class="w-full max-w-sm mx-auto shadow-xl">
+            <div
+              class="flex items-start justify-end h-56 w-full bg-cover"
+              style="background-image: url('{% static 'product2.jpg' %}')"
+            >
+              <button
+                class="p-2 w-14 h-14 rounded-full bg-[#08708F] text-white ml-5 -mr-4 -mt-4 hover:bg-[#156290] focus:outline-none focus:bg-[#156290]"
+              >
+                Sales
+              </button>
+            </div>
+            <div class="px-5 py-3">
+              <h1 class="text-gray-700 uppercase">DNK Brown Shoes</h1>
+              <p class="text-gray-400 mt-2">Men</p>
+              <p class="font-bold">
+                <span class="text-gray-500 line-through">$150.00</span>
+                <span class="text-gray-700 mt-2">$120.00</span>
+              </p>
+              <p></p>
+              <p class="flex flex-row my-2">
+                <span class="w-4 h-4 bg-red-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-blue-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-green-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-yellow-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-purple-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-pink-500 rounded-full mr-2"></span>
+              </p>
+
+              <p class="flex flex-row my-2">
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+              </p>
+            </div>
+          </div>
+          <div class="w-full max-w-sm mx-auto shadow-xl">
+            <div
+              class="flex items-start justify-end h-56 w-full bg-cover"
+              style="background-image: url('{% static 'product3.jpg' %}')"
+            >
+              <button
+                class="p-2 w-14 h-14 rounded-full bg-[#08708F] text-white ml-5 -mr-4 -mt-4 hover:bg-[#156290] focus:outline-none focus:bg-[#156290]"
+              >
+                Sales
+              </button>
+            </div>
+            <div class="px-5 py-3">
+              <h1 class="text-gray-700 uppercase">DNK Brown Shoes</h1>
+              <p class="text-gray-400 mt-2">Men</p>
+              <p class="font-bold">
+                <span class="text-gray-500 line-through">$150.00</span>
+                <span class="text-gray-700 mt-2">$120.00</span>
+              </p>
+              <p></p>
+              <p class="flex flex-row my-2">
+                <span class="w-4 h-4 bg-red-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-blue-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-green-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-yellow-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-purple-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-pink-500 rounded-full mr-2"></span>
+              </p>
+
+              <p class="flex flex-row my-2">
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+              </p>
+            </div>
+          </div>
+          <div class="w-full max-w-sm mx-auto shadow-xl">
+            <div
+              class="flex items-start justify-end h-56 w-full bg-cover"
+              style="background-image: url('{% static 'product4.jpg' %}')"
+            >
+              <button
+                class="p-2 w-14 h-14 rounded-full bg-[#08708F] text-white ml-5 -mr-4 -mt-4 hover:bg-[#156290] focus:outline-none focus:bg-[#156290]"
+              >
+                Sales
+              </button>
+            </div>
+            <div class="px-5 py-3">
+              <h1 class="text-gray-700 uppercase">DNK Brown Shoes</h1>
+              <p class="text-gray-400 mt-2">Men</p>
+              <p class="font-bold">
+                <span class="text-gray-500 line-through">$150.00</span>
+                <span class="text-gray-700 mt-2">$120.00</span>
+              </p>
+              <p></p>
+              <p class="flex flex-row my-2">
+                <span class="w-4 h-4 bg-red-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-blue-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-green-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-yellow-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-purple-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-pink-500 rounded-full mr-2"></span>
+              </p>
+
+              <p class="flex flex-row my-2">
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+              </p>
+            </div>
+          </div>
+          <div class="w-full max-w-sm mx-auto shadow-xl">
+            <div
+              class="flex items-start justify-end h-56 w-full bg-cover"
+              style="background-image: url('{% static 'product5.jpg' %}')"
+            >
+              <button
+                class="p-2 w-14 h-14 rounded-full bg-[#08708F] text-white ml-5 -mr-4 -mt-4 hover:bg-[#156290] focus:outline-none focus:bg-[#156290]"
+              >
+                Sales
+              </button>
+            </div>
+            <div class="px-5 py-3">
+              <h1 class="text-gray-700 uppercase">DNK Brown Shoes</h1>
+              <p class="text-gray-400 mt-2">Men</p>
+              <p class="font-bold">
+                <span class="text-gray-500 line-through">$150.00</span>
+                <span class="text-gray-700 mt-2">$120.00</span>
+              </p>
+              <p></p>
+              <p class="flex flex-row my-2">
+                <span class="w-4 h-4 bg-red-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-blue-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-green-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-yellow-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-purple-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-pink-500 rounded-full mr-2"></span>
+              </p>
+
+              <p class="flex flex-row my-2">
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+              </p>
+            </div>
+          </div>
+          <div class="w-full max-w-sm mx-auto shadow-xl">
+            <div
+              class="flex items-start justify-end h-56 w-full bg-cover"
+              style="background-image: url('{% static 'product6.jpg' %}')"
+            >
+              <button
+                class="p-2 w-14 h-14 rounded-full bg-[#08708F] text-white ml-5 -mr-4 -mt-4 hover:bg-[#156290] focus:outline-none focus:bg-[#156290]"
+              >
+                Sales
+              </button>
+            </div>
+            <div class="px-5 py-3">
+              <h1 class="text-gray-700 uppercase">DNK Brown Shoes</h1>
+              <p class="text-gray-400 mt-2">Men</p>
+              <p class="font-bold">
+                <span class="text-gray-500 line-through">$150.00</span>
+                <span class="text-gray-700 mt-2">$120.00</span>
+              </p>
+              <p></p>
+              <p class="flex flex-row my-2">
+                <span class="w-4 h-4 bg-red-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-blue-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-green-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-yellow-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-purple-500 rounded-full mr-2"></span>
+                <span class="w-4 h-4 bg-pink-500 rounded-full mr-2"></span>
+              </p>
+
+              <p class="flex flex-row my-2">
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 21 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"
+                  />
+                </svg>
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="flex flex-col lg:flex-row justify-between mt-8">
-        <div class="lg:w-[30%]">
-          <img
-            src="{% static 'bottom_card_1.jpg' %}"
-            alt="Card 1"
-            class="w-full"
-          />
-          <h1 class="text-xs font-bold text-[#8483E2] pt-4">UI DESIGN</h1>
-          <h2 class="text-lg font-semibold mt-2">
-            Compelling Design Takes More Than "Making It Like Stripe"
-          </h2>
-        </div>
-        <div class="lg:w-[30%]">
-          <img
-            src="{% static 'bottom_card_2.jpg' %}"
-            alt="Card 2"
-            class="w-full"
-          />
-          <h1 class="text-xs font-bold text-[#8483E2] pt-4">DESIGN PROCESS</h1>
-          <h2 class="text-lg font-semibold mt-2">
-            What Is Design Thinking and How It Hacks the Way to
-          </h2>
-        </div>
-        <div class="lg:w-[30%]">
-          <img
-            src="{% static 'bottom_card_3.jpg' %}"
-            alt="Card 3"
-            class="w-full"
-          />
-          <h1 class="text-xs font-bold text-[#8483E2] pt-4">UX DESIGN</h1>
-          <h2 class="text-lg font-semibold mt-2">
-            Health care UX: How Design Can Solve Biggest Challenges For
-          </h2>
-        </div>
-      </div>
+      </section>
     </main>
   </body>
 </html>
