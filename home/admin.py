@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Genre, Product
+
+admin.site.register(Genre)
+admin.site.register(Product)
