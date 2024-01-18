@@ -139,7 +139,7 @@
     <main class="bg-[#EDEBF4]">
       <section class="container mx-auto mt-10 px-6">
         <!--Partners  Section-->
-        <div class="flex flex-col md:flex-row justify-evenly py-6">
+        <div class="flex flex-col md:flex-row justify-evenly py-6 items-center">
           <button class="hidden lg:flex">
             <svg
               class="w-6 h-6 text-gray-300"
@@ -370,8 +370,52 @@
             </svg>
           </button>
         </div>
-        <div>
-          
+        <div class="grid gap-20 mt-6 md:grid-cols-3 justify-items-center">
+          <div
+            class="relative w-full max-w-md h-[25rem] bg-cover bg-center text-white"
+            style="background-image: url('{% static 'woman_bann_cd.jpg' %}')"
+          >
+            <div
+              class="absolute top-0 left-0 w-full h-full bg-black opacity-50"
+            ></div>
+            <div class="absolute bottom-10 left-5">
+              <h1 class="text-lg font-bold">20% Off On Tank Tops</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <button class="px-4 py-2 mt-4 text-black bg-white">
+                Shop Now
+              </button>
+            </div>
+          </div>
+          <div
+            class="relative w-full max-w-md h-[25rem] bg-cover bg-center text-white"
+            style="background-image: url('{% static 'man_bann_cd.png' %}')"
+          >
+            <div
+              class="absolute top-0 left-0 w-full h-full bg-black opacity-50"
+            ></div>
+            <div class="absolute bottom-10 left-5">
+              <h1 class="text-lg font-bold">Latest Eyewear For You</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <button class="px-4 py-2 mt-4 text-black bg-white">
+                Shop Now
+              </button>
+            </div>
+          </div>
+          <div
+            class="relative w-full max-w-md h-[25rem] bg-cover bg-center text-white"
+            style="background-image: url('{% static 'shoe_bann_cd.png' %}')"
+          >
+            <div
+              class="absolute top-0 left-0 w-full h-full bg-black opacity-50"
+            ></div>
+            <div class="absolute bottom-10 left-5">
+              <h1 class="text-lg font-bold">Let's Lorem Suit Up</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <button class="px-4 py-2 mt-4 text-black bg-white">
+                Shop Now
+              </button>
+            </div>
+          </div>
         </div>
       </section>
       <section class="container mx-auto px-6">
