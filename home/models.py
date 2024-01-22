@@ -8,13 +8,23 @@ class Genre(models.Model):
         return self.name
 
 
+class Color(models.Model):
+    name = models.CharField(max_length=100)
+    color = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+
 class Product(models.Model):
     image = models.ImageField(upload_to='product_images')
-    product_name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
     genre = models.ForeignKey(Genre, on_delete=models.DO_NOTHING)
-    colors = models.CharField(max_length=100)
+    previous_price = models.DecimalField(max_digits=6, decimal_places=2)
+    current_price = models.DecimalField(max_digits=6, decimal_places=2)
+    colors = models.ManyToManyField(Color)
     rating = models.DecimalField(max_digits=3, decimal_places=1)
     featured = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.product_name
+        return self.name
