@@ -28,3 +28,12 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class BannerAd(models.Model):
+    image = models.ImageField(upload_to='banner_ads')
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.title

@@ -371,16 +371,17 @@
           </button>
         </div>
         <div class="grid gap-20 mt-6 md:grid-cols-3 justify-items-center">
+          {% for ad in banner_ads %}
           <div
             class="relative w-full max-w-md h-[25rem] bg-cover bg-center text-white"
-            style="background-image: url('{% static 'woman_bann_cd.jpg' %}')"
+            style="background-image: url('{{ ad.image.url }}')"
           >
             <div
               class="absolute top-0 left-0 w-full h-full bg-black opacity-50"
             ></div>
             <div class="absolute bottom-10 left-5">
-              <h1 class="text-lg font-bold">20% Off On Tank Tops</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <h1 class="text-lg font-bold">{{ ad.title }}</h1>
+              <p>{{ ad.description }}</p>
               <button
                 class="px-4 py-2 mt-4 text-black bg-white hover:bg-gray-400"
               >
@@ -388,40 +389,7 @@
               </button>
             </div>
           </div>
-          <div
-            class="relative w-full max-w-md h-[25rem] bg-cover bg-center text-white"
-            style="background-image: url('{% static 'man_bann_cd.png' %}')"
-          >
-            <div
-              class="absolute top-0 left-0 w-full h-full bg-black opacity-50"
-            ></div>
-            <div class="absolute bottom-10 left-5">
-              <h1 class="text-lg font-bold">Latest Eyewear For You</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <button
-                class="px-4 py-2 mt-4 text-black bg-white hover:bg-gray-400"
-              >
-                Shop Now
-              </button>
-            </div>
-          </div>
-          <div
-            class="relative w-full max-w-md h-[25rem] bg-cover bg-center text-white"
-            style="background-image: url('{% static 'shoe_bann_cd.png' %}')"
-          >
-            <div
-              class="absolute top-0 left-0 w-full h-full bg-black opacity-50"
-            ></div>
-            <div class="absolute bottom-10 left-5">
-              <h1 class="text-lg font-bold">Let's Lorem Suit Up</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <button
-                class="px-4 py-2 mt-4 text-black bg-white hover:bg-gray-400"
-              >
-                Shop Now
-              </button>
-            </div>
-          </div>
+          {% endfor %}
         </div>
       </section>
       <section class="container mx-auto px-6">
@@ -697,8 +665,8 @@
             <form>
               <input
                 type="text"
-                placeholder="Your email address"
-                class="border border-gray-300 rounded-md px-2 py-1 mt-2"
+                placeholder="Enter your email address"
+                class="border border-gray-300 px-2 py-1 mt-2"
               />
               <button class="px-4 py-2 bg-[#08708F] text-white font-bold mt-2">
                 SUBSCRIBE

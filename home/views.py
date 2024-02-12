@@ -1,9 +1,9 @@
 """Module for views of the dnk app."""
 from django.shortcuts import render
-from .models import Product
+from .models import Product, BannerAd
 
 
 def index(request):
     selectedProducts = Product.objects.all()
-    print(selectedProducts[1].colors.all())
-    return render(request, "index.html", {"products": selectedProducts})
+    selectedBannerAds = BannerAd.objects.all()
+    return render(request, "index.html", {"products": selectedProducts, "banner_ads": selectedBannerAds})
